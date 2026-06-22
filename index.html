@@ -1,248 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>K-Air Heating Cooling | HVAC Services in Chicagoland</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<meta name="description" content="K-Air Heating Cooling provides professional HVAC installation, repair, maintenance, furnace and AC services throughout the Chicago Northwest Suburbs.">
+<title>K-Air Heating Cooling | HVAC Chicago Suburbs</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<meta name="description" content="K-Air Heating Cooling provides HVAC installation, repair, and maintenance services in Chicago suburbs. Fast, reliable, licensed technician service."/>
+<meta name="keywords" content="HVAC Chicago, AC repair, furnace repair, HVAC installation, K-Air Heating Cooling"/>
+<meta property="og:title" content="K-Air Heating Cooling"/>
+<meta property="og:description" content="Reliable HVAC service in Chicago suburbs"/>
+<meta property="og:type" content="website"/>
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    line-height:1.6;
-    color:#333;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-header{
-    background:linear-gradient(rgba(0,60,120,.75), rgba(0,60,120,.75)),
-    url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1600&q=80');
-    background-size:cover;
-    background-position:center;
-    color:white;
-    text-align:center;
-    padding:100px 20px;
-}
-
-header h1{
-    font-size:3rem;
-    margin-bottom:10px;
-}
-
-header p{
-    font-size:1.3rem;
-    margin-bottom:25px;
-}
-
-.btn{
-    display:inline-block;
-    background:#00a8ff;
-    color:white;
-    text-decoration:none;
-    padding:14px 28px;
-    border-radius:5px;
-    font-weight:bold;
-    margin:5px;
-}
-
-.btn:hover{
-    background:#0086d1;
-}
-
-section{
-    padding:70px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
-    color:#003c78;
-}
-
-.services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.service-card{
-    background:#f8f9fa;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
-}
-
-.about{
-    background:#eef6ff;
-}
-
-.about p{
-    max-width:800px;
-    margin:auto;
-    text-align:center;
-    font-size:1.1rem;
-}
-
-.area-list{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:15px;
-    text-align:center;
-}
-
-.contact{
-    background:#003c78;
-    color:white;
-    text-align:center;
-}
-
-.contact h2{
-    margin-bottom:20px;
-}
-
-.contact p{
-    margin:10px 0;
-    font-size:1.1rem;
-}
-
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-.phone{
-    font-size:1.5rem;
-    font-weight:bold;
-}
-
-@media(max-width:768px){
-    header h1{
-        font-size:2rem;
-    }
-}
-</style>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 
 <body>
 
 <header>
-    <div class="container">
-        <h1>K-Air Heating Cooling</h1>
-        <p>Reliable Heating & Cooling Services for Chicagoland Homeowners</p>
-
-        <a href="tel:8473069797" class="btn">📞 Call Now</a>
-
-        <a href="mailto:admin@kairhvacchicago.com" class="btn">
-        ✉ Request Estimate
-        </a>
-    </div>
+  <div class="logo">K-AIR</div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<section>
-    <div class="container">
-        <h2 class="section-title">Our Services</h2>
-
-        <div class="services">
-
-            <div class="service-card">
-                <h3>Air Conditioning Installation</h3>
-                <p>Professional AC system replacement and installation.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Furnace Installation</h3>
-                <p>High-efficiency furnace installation and upgrades.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>HVAC Repair</h3>
-                <p>Fast diagnostics and repair for heating and cooling systems.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Preventive Maintenance</h3>
-                <p>Seasonal inspections and tune-ups to keep systems running efficiently.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Condenser Cleaning</h3>
-                <p>Improve efficiency and system lifespan with professional cleaning.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Water Heater Service</h3>
-                <p>Installation, maintenance, and troubleshooting services.</p>
-            </div>
-
-        </div>
-    </div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Heating & Cooling You Can Trust</h1>
+    <p>Installation • Repair • Maintenance • Emergency Service</p>
+    <a class="btn" href="#contact">Request Service</a>
+  </div>
 </section>
 
-<section class="about">
-    <div class="container">
-        <h2 class="section-title">Why Choose K-Air?</h2>
+<section id="services">
+<h2>Our Services</h2>
 
-        <p>
-            K-Air Heating Cooling provides dependable HVAC solutions for homeowners
-            throughout the Chicago Northwest Suburbs. We focus on honest service,
-            quality workmanship, and customer satisfaction. Whether you need a new
-            furnace, AC replacement, repairs, or routine maintenance, we are ready
-            to help.
-        </p>
-    </div>
+<div class="grid">
+
+<div class="card">
+<img src="images/ac1.jpg" style="width:100%;border-radius:10px;">
+<h3>AC Installation</h3>
+<p>High efficiency cooling systems.</p>
+</div>
+
+<div class="card">
+<img src="images/furnace1.jpg" style="width:100%;border-radius:10px;">
+<h3>Furnace Repair</h3>
+<p>Fast heating system diagnostics and repair.</p>
+</div>
+
+</div>
 </section>
 
-<section>
-    <div class="container">
-        <h2 class="section-title">Service Areas</h2>
-
-        <div class="area-list">
-            <div>Hoffman Estates</div>
-            <div>Schaumburg</div>
-            <div>Arlington Heights</div>
-            <div>Palatine</div>
-            <div>Des Plaines</div>
-            <div>Mount Prospect</div>
-            <div>Elk Grove Village</div>
-            <div>Northwest Chicago Suburbs</div>
-        </div>
-    </div>
+<section id="about">
+<h2>About Us</h2>
+<p>
+Serving Chicago suburbs including Hoffman Estates, Schaumburg, and surrounding areas.
+</p>
 </section>
 
-<section class="contact">
-    <div class="container">
+<section id="map">
+<h2>Service Area</h2>
+<iframe
+  src="https://www.google.com/maps?q=Hoffman+Estates+IL&output=embed"
+  width="100%" height="300" style="border:0;">
+</iframe>
+</section>
 
-        <h2>Contact Us Today</h2>
+<section id="contact">
+<h2>Request Service</h2>
 
-        <p class="phone">847-306-9797</p>
+<form id="serviceForm">
+<input type="text" id="name" placeholder="Your Name" required/>
+<input type="email" id="email" placeholder="Your Email" required/>
+<input type="text" id="phone" placeholder="Phone Number" required/>
+<textarea id="message" placeholder="Describe your HVAC issue" required></textarea>
 
-        <p>admin@kairhvacchicago.com</p>
+<button type="submit">Send Request</button>
+</form>
 
-        <p>Free Estimates Available</p>
+<p style="text-align:center;margin-top:20px;">
+Or call: (847) 306-9797
+</p>
 
-        <p>Licensed & Insured</p>
-
-    </div>
 </section>
 
 <footer>
-    <p>© 2026 K-Air Heating Cooling. All Rights Reserved.</p>
+<p>© 2026 K-Air Heating Cooling</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
