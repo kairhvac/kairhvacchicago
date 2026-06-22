@@ -152,3 +152,11 @@ footer h2 { margin-top: 0; }
     .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
     .nav-links > a, .dropdown { margin-left: 0; }
 }
+/* Footer Contact Links */
+footer p {
+    margin: 10px 0;
+}
+footer a:hover {
+    color: #ffcc00 !important; /* 마우스를 올렸을 때 살짝 강조색으로 변경 */
+    transition: 0.3s;
+}
