@@ -1,156 +1,231 @@
-@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700;900&display=swap');
-
-html { scroll-behavior: smooth; }
-
-body { 
-    font-family: 'Pretendard', sans-serif; 
-    margin: 0; 
-    color: #333; 
-    line-height: 1.6; 
-    background-color: #f8f9fa;
+/* 전체 기본 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
-/* Header & Logo Styles */
-.header {
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* [상단 헤더 영역] */
+.site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 15px 10%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* 첫 번째 이미지와 동일한 로고 디자인 구현 */
-.logo-wrapper { 
-    text-decoration: none; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-}
-.logo-main { font-size: 38px; font-weight: 900; line-height: 1; letter-spacing: -1px; }
-.logo-main .text-red { color: #E31837; } /* K-AIR의 빨간색 */
-.logo-main .text-blue { color: #0033A0; } /* K-AIR의 파란색 */
-.logo-sub { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; margin-top: 4px; }
-.logo-sub .text-gray { color: #666; }
-.logo-sub .text-blue { color: #0033A0; }
-
-/* Navigation & Dropdown Styles */
-.nav-links { display: flex; align-items: center; }
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-.nav-links > a { margin-left: 30px; }
-.nav-links a:hover, .dropdown:hover .dropbtn { color: #0033A0; }
-
-/* 드롭다운 컨테이너 */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin-left: 30px;
-}
-.dropdown .dropbtn { padding: 10px 0; cursor: pointer; }
-
-/* 드롭다운 숨겨진 메뉴 상자 */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 220px;
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
-    border-radius: 8px;
-    top: 100%;
-    left: -20px;
-    overflow: hidden;
-    z-index: 1;
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-/* 드롭다운 세부 항목 */
-.dropdown-content a {
-    color: #555;
-    padding: 15px 20px;
-    text-decoration: none;
+.site-logo {
+    height: 55px;
+    width: auto;
     display: block;
-    margin-left: 0;
-    font-size: 0.95rem;
+}
+
+.site-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: #4a5568;
     font-weight: 500;
-    border-bottom: 1px solid #f0f0f0;
-    transition: background-color 0.2s, padding-left 0.2s;
-}
-.dropdown-content a:last-child { border-bottom: none; }
-.dropdown-content a:hover { 
-    background-color: #f8f9fa; 
-    color: #0033A0; 
-    padding-left: 25px; /* 마우스 올렸을 때 살짝 들어가는 효과 */
+    font-size: 16px;
+    transition: color 0.2s ease;
 }
 
-/* 마우스를 올렸을 때 드롭다운 메뉴 보이기 */
-.dropdown:hover .dropdown-content { display: block; }
+.site-nav a:hover {
+    color: #0056b3;
+}
 
-/* Hero Section */
-.hero { 
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/main.jpg');
-    background-size: cover; 
-    background-position: center; 
-    color: white; 
-    padding: 120px 20px; 
+/* 상단 네비게이션 전화걸기 버튼 스타일 */
+.site-nav .call-nav-btn {
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.site-nav .call-nav-btn:hover {
+    background-color: #004085;
+    color: #ffffff;
+}
+
+/* [메인 히어로 섹션] */
+.hero-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
     text-align: center;
 }
-.hero h1 { font-size: 3rem; margin-bottom: 10px; }
-.hero p { font-size: 1.2rem; }
 
-/* Services Section */
-.services-section { padding: 80px 20px; text-align: center; }
-.services-section h2 { font-size: 2rem; color: #002244; margin-bottom: 40px; }
-.container { max-width: 1200px; margin: auto; }
-.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-
-.card { 
-    background: #fff; 
-    border-radius: 10px; 
-    overflow: hidden; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
-    transition: transform 0.3s ease;
+.slogan {
+    font-size: 14px;
+    font-weight: 700;
+    color: #dc3545; /* 로고의 레드 색상 반영 */
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
-.card:hover { transform: translateY(-5px); }
-.card img { width: 100%; height: 180px; object-fit: cover; display: block; }
-.card-content { padding: 25px 20px; }
-.card h3 { margin: 0 0 10px 0; color: #002244; font-size: 1.2rem; }
-.card p { margin: 0; color: #666; font-size: 0.95rem; }
 
-/* About Us Section */
-.about-section { padding: 80px 20px; background-color: #fff; text-align: center; }
-.about-section h2 { font-size: 2rem; color: #002244; margin-bottom: 20px; }
-.about-section p { max-width: 800px; margin: auto; font-size: 1.1rem; color: #555; line-height: 1.8; }
-
-/* Footer */
-footer { background: #002244; color: white; padding: 60px 20px; text-align: center; }
-footer h2 { margin-top: 0; }
-.btn { 
-    background: #0056b3; 
-    color: white; 
-    padding: 15px 35px; 
-    text-decoration: none; 
-    border-radius: 5px; 
-    display: inline-block; 
-    margin-top: 20px; 
-    font-weight: bold;
-    transition: background 0.3s;
+.hero-section h1 {
+    font-size: 36px;
+    color: #1a202c;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
-.btn:hover { background: #004494; }
 
-/* Mobile Responsive */
-@media (max-width: 900px) {
-    .grid { grid-template-columns: repeat(2, 1fr); }
+/* 라이센스 바 */
+.license-badge {
+    display: inline-block;
+    background-color: #e6f0fa;
+    color: #0056b3;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #b8daff;
 }
-@media (max-width: 600px) {
-    .grid { grid-template-columns: 1fr; }
-    .header { flex-direction: column; text-align: center; gap: 15px; padding: 20px; }
-    .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
-    .nav-links > a, .dropdown { margin-left: 0; }
+
+/* 비즈니스 연락처 카드 디자인 */
+.contact-card {
+    background: #ffffff;
+    max-width: 450px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-left: 5px solid #0056b3;
+}
+
+.contact-name {
+    font-size: 18px;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.contact-item {
+    margin: 8px 0;
+}
+
+.contact-item a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.phone-link {
+    color: #0056b3;
+}
+
+.phone-link:hover {
+    color: #004085;
+    text-decoration: underline;
+}
+
+.email-link {
+    color: #4a5568;
+}
+
+.email-link:hover {
+    color: #2d3748;
+    text-decoration: underline;
+}
+
+/* [핵심 서비스 그리드] */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #edf2f7;
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+}
+
+.service-icon {
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+}
+
+.service-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+/* [하단 푸터 영역] */
+.footer-qr {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-qr p {
+    font-size: 15px;
+    color: #718096;
+    font-weight: 500;
+}
+
+.qr-code {
+    width: 120px;
+    height: 120px;
+    background-color: #edf2f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #a0aec0;
+    border-radius: 8px;
+}
+
+/* 반응형 모바일 레이아웃 조정 */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 5%;
+    }
 }
