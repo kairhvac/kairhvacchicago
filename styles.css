@@ -1,0 +1,244 @@
+/* 기본 스타일 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* 상단 헤더 */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-logo {
+    height: 55px; /* 로고가 선명하고 깔끔하게 보이도록 크기 지정 */
+    width: auto;
+    display: block;
+}
+
+.site-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.site-nav a:hover {
+    color: #0056b3; /* 로고의 블루 톤 매칭 */
+}
+
+.site-nav .call-btn {
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 6px;
+}
+
+.site-nav .call-btn:hover {
+    background-color: #004085;
+}
+
+/* 소개 섹션 */
+.intro-section {
+    max-width: 800px;
+    margin: 50px auto 30px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.slogan {
+    font-size: 14px;
+    font-weight: 800;
+    color: #dc3545; /* 로고의 레드 톤 매칭 */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+
+.intro-section h1 {
+    font-size: 36px;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.badge-container {
+    margin-bottom: 20px;
+}
+
+.license-badge {
+    background-color: #e2e8f0;
+    color: #334155;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.info-box {
+    background-color: #ffffff;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+.info-box p {
+    margin: 4px 0;
+    font-size: 15px;
+}
+
+.info-box a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* 원래의 4대 파트 서비스 섹션 레이아웃 */
+.services-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 28px;
+    color: #0f172a;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #0056b3;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* 각 서비스 파트 간의 간격 */
+}
+
+/* 서비스 개별 파트 세로형/가로형 카드 */
+.service-part {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border: 1px solid #e2e8f0;
+    display: flex; /* 이미지와 텍스트를 좌우로 배치 */
+}
+
+/* 홀수 번째 파트는 이미지가 오른쪽으로 가도록 대칭 정렬 */
+.service-part:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.service-image-box {
+    flex: 1;
+    min-height: 200px;
+    background-color: #cbd5e1; /* 이미지 로딩 전 임시 배경색 */
+}
+
+.service-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 찌그러지지 않고 꽉 차게 조절 */
+    display: block;
+}
+
+.service-content {
+    flex: 1.2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-content h3 {
+    font-size: 22px;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.service-content p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* 푸터 */
+.site-footer {
+    margin-top: 60px;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.qr-code-box {
+    width: 110px;
+    height: 110px;
+    background-color: #f1f5f9;
+    border: 1px dashed #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #94a3b8;
+    border-radius: 6px;
+}
+
+/* 모바일 반응형 화면 전환 */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .service-part, .service-part:nth-child(even) {
+        flex-direction: column; /* 모바일에서는 이미지 아래로 텍스트가 가도록 세로 정렬 */
+    }
+    
+    .service-image-box {
+        height: 180px;
+    }
+}
