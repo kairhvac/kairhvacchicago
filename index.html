@@ -3,89 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K-AIR Heating & Cooling</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>K-Air Heating Cooling</title>
+    <!-- 외부 스타일시트 파일(style.css)을 연결합니다 -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <a href="#home" class="logo-wrapper">
-            <div class="logo-main"><span class="text-red">K-</span><span class="text-blue">AIR</span></div>
-            <div class="logo-sub"><span class="text-gray">HEATING</span> <span class="text-blue">COOLING</span></div>
-        </a>
-        
-        <nav class="nav-links">
-            <a href="#home">Home</a>
-            
-            <div class="dropdown">
-                <a href="#services" class="dropbtn">Services ▾</a>
-                <div class="dropdown-content">
-                    <a href="#services">Installation</a>
-                    <a href="#services">HVAC Repair</a>
-                    <a href="#services">Maintenance</a>
-                    <a href="#services">Cleaning</a>
-                </div>
-            </div>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
+    <!-- 상단 헤더 영역 -->
+    <header class="site-header">
+        <div class="logo-container">
+            <a href="/">
+                <!-- 왼쪽 상단 로고 이미지 -->
+                <img src="K_air.png" alt="K-Air Heating Cooling" class="site-logo">
+            </a>
+        </div>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="#home">홈</a></li>
+                <li><a href="#services">서비스</a></li>
+                <!-- 모바일 사용자를 위해 메뉴 우측에 바로 전화를 걸 수 있는 버튼을 배치했습니다 -->
+                <li><a href="tel:847-306-9797" class="call-nav-btn">📞 전화 걸기</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <h1>Reliable Comfort. All Year Long.</h1>
-        <p>Professional HVAC Installation, Repair & Maintenance for Homes and Businesses.</p>
-    </section>
+    <!-- 메인 콘텐츠 영역 -->
+    <main class="hero-section">
+        <!-- 로고 하단 슬로건 -->
+        <p class="slogan">Comfort You Can Count On</p>
+        <h1>Chicago 지역 HVAC 전문가, K-Air</h1>
+        
+        <!-- EPA 라이센스 정보 -->
+        <div class="license-badge">
+            📋 EPA 608 UNIVERSAL 라이센스 보유
+        </div>
 
-    <section id="services" class="services-section">
-        <h2>Complete HVAC Solutions</h2>
-        <div class="container">
-            <div class="grid">
-                <div class="card">
-                    <img src="images/ac.jpg" alt="Installation">
-                    <div class="card-content">
-                        <h3>Installation</h3>
-                        <p>High-efficiency AC & Furnace installation and replacement.</p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <img src="images/repair.jpg" alt="HVAC Repair">
-                    <div class="card-content">
-                        <h3>HVAC Repair</h3>
-                        <p>Fast, reliable repair for all heating and cooling systems.</p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <img src="images/maintenance.jpg" alt="Preventive Maintenance">
-                    <div class="card-content">
-                        <h3>Maintenance</h3>
-                        <p>Seasonal tune-ups to keep your system running strong.</p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <img src="images/cleaning.jpg" alt="Coil Cleaning">
-                    <div class="card-content">
-                        <h3>Cleaning</h3>
-                        <p>Condenser & Evaporator cleaning to improve efficiency.</p>
-                    </div>
-                </div>
+        <!-- 비즈니스 정보 카드 (클릭 시 전화/이메일 자동 연결) -->
+        <div class="contact-card">
+            <p class="contact-name">대표: <strong>YS KIM</strong></p>
+            <p class="contact-item">
+                <a href="tel:847-306-9797" class="phone-link">📞 847-306-9797</a>
+            </p>
+            <p class="contact-item">
+                <a href="mailto:ADMIN@KAIRHVACCHICAGO.COM" class="email-link">✉️ ADMIN@KAIRHVACCHICAGO.COM</a>
+            </p>
+        </div>
+
+        <!-- 4대 핵심 서비스 그리드 -->
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">❄️</div>
+                <div class="service-text">냉난방 시스템</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <div class="service-text">정기 점검 및 수리</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚰</div>
+                <div class="service-text">플러밍 작업</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <div class="service-text">전기 작업</div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <section id="about" class="about-section">
-        <h2>About Us</h2>
-        <div class="container">
-            <p>K-AIR Heating Cooling is a professional HVAC company proudly serving the Chicago Northwest Suburbs. With EPA Universal certification and extensive technical expertise, we take pride in delivering honest recommendations, quality workmanship, and dependable service you can count on.</p>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <h2>Need HVAC Service?</h2>
-        <p>We're just a call away! <strong>847-306-9797</strong></p>
-        <a href="mailto:admin@kairhvacchicago.com" class="btn">CONTACT US TODAY</a>
+    <!-- 하단 푸터 영역 -->
+    <footer class="footer-qr">
+        <p>저희 웹사이트를 QR코드로도 방문해 보세요</p>
+        <div class="qr-code">QR CODE</div>
     </footer>
 
 </body>
