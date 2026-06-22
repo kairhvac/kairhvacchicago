@@ -4,308 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K-Air Heating Cooling</title>
-    <style>
-        /* [CSS 디자인 코드가 이 내부에 포함되어 있어 파일 하나로 작동합니다] */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f4f7f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* 상단 헤더 영역 */
-        .site-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 8%;
-            background-color: #ffffff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo-container a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        /* 왼쪽 상단 로고 이미지 스타일 */
-        .site-logo {
-            height: 50px;
-            width: auto;
-            display: block;
-        }
-
-        .site-nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-            align-items: center;
-        }
-
-        .site-nav a {
-            text-decoration: none;
-            color: #4a5568;
-            font-weight: 600;
-            font-size: 15px;
-            transition: color 0.2s ease;
-        }
-
-        .site-nav a:hover {
-            color: #0056b3;
-        }
-
-        /* 상단 전화걸기 버튼 */
-        .site-nav .call-nav-btn {
-            background-color: #0056b3;
-            color: #ffffff;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-weight: 600;
-        }
-
-        .site-nav .call-nav-btn:hover {
-            background-color: #004085;
-        }
-
-        /* 메인 히어로 섹션 */
-        .hero-section {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .slogan {
-            font-size: 13px;
-            font-weight: 800;
-            color: #dc3545;
-            letter-spacing: 1.5px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-        }
-
-        .hero-section h1 {
-            font-size: 34px;
-            color: #1a202c;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        /* 라이센스 바 */
-        .license-badge {
-            display: inline-block;
-            background-color: #e6f0fa;
-            color: #0056b3;
-            padding: 8px 24px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 15px;
-            margin-bottom: 35px;
-            border: 1px solid #b8daff;
-        }
-
-        /* 비즈니스 연락처 카드 */
-        .contact-card {
-            background: #ffffff;
-            max-width: 400px;
-            margin: 0 auto 40px auto;
-            padding: 22px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-            border-top: 4px solid #0056b3;
-        }
-
-        .contact-name {
-            font-size: 18px;
-            color: #2d3748;
-            margin-bottom: 12px;
-        }
-
-        .contact-item {
-            margin: 6px 0;
-        }
-
-        .contact-item a {
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 600;
-            transition: color 0.2s ease;
-        }
-
-        .phone-link {
-            color: #0056b3;
-        }
-
-        .email-link {
-            color: #4a5568;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* 서비스 그리드 레이아웃 */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            max-width: 750px;
-            margin: 0 auto 50px auto;
-        }
-
-        .service-card {
-            background: #ffffff;
-            padding: 20px 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        .service-icon {
-            font-size: 28px;
-            width: 40px;
-            text-align: center;
-        }
-
-        .service-text {
-            font-size: 17px;
-            font-weight: 600;
-            color: #2d3748;
-        }
-
-        /* 하단 푸터 및 QR */
-        .footer-qr {
-            margin-top: 50px;
-            padding: 35px;
-            background-color: #ffffff;
-            border-top: 1px solid #e2e8f0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .footer-qr p {
-            font-size: 14px;
-            color: #718096;
-            font-weight: 500;
-        }
-
-        .qr-code {
-            width: 110px;
-            height: 110px;
-            background-color: #edf2f7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            color: #a0aec0;
-            border-radius: 6px;
-            border: 1px dashed #cbd5e0;
-        }
-
-        /* 모바일 반응형 대응 */
-        @media (max-width: 768px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .site-header {
-                flex-direction: column;
-                gap: 12px;
-                padding: 15px;
-            }
-            .site-nav ul {
-                gap: 15px;
-            }
-            .hero-section h1 {
-                font-size: 28px;
-            }
-        }
-    </style>
+    <!-- 외부 스타일시트 연결 -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 상단 헤더 -->
+    <!-- 상단 헤더: 원래 구성을 유지하되 왼쪽 로고만 교체 -->
     <header class="site-header">
         <div class="logo-container">
             <a href="/">
-                <!-- 올려주신 원본 파일명인 'K air.png' 스페이스 공백을 인코딩(%20) 처리하여 매칭했습니다 -->
-                <img src="K%20air.png" alt="K-Air Heating Cooling" class="site-logo">
+                <!-- 💡 왼쪽 상단: 올려주신 K-Air 로고 이미지 적용 -->
+                <img src="K_air.png" alt="K-Air Heating Cooling" class="site-logo">
             </a>
         </div>
         <nav class="site-nav">
             <ul>
-                <li><a href="#home">홈</a></li>
-                <li><a href="#services">서비스</a></li>
-                <li><a href="tel:847-306-9797" class="call-nav-btn">📞 전화 걸기</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="tel:847-306-9797" class="call-btn">📞 847-306-9797</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 메인 콘텐츠 -->
-    <main class="hero-section">
+    <!-- 메인 비즈니스 및 면허 정보 -->
+    <section class="intro-section" id="home">
         <p class="slogan">Comfort You Can Count On</p>
-        <h1>Chicago 지역 HVAC 전문가, K-Air</h1>
+        <h1>Chicago K-Air Heating & Cooling</h1>
         
-        <div class="license-badge">
-            📋 EPA 608 UNIVERSAL 라이센스 보유
+        <!-- 라이센스 및 비즈니스 정보 고수 -->
+        <div class="badge-container">
+            <span class="license-badge">📋 EPA 608 UNIVERSAL Certified</span>
         </div>
 
-        <!-- 연락처 내역 카드 -->
-        <div class="contact-card">
-            <p class="contact-name">대표: <strong>YS KIM</strong></p>
-            <p class="contact-item">
-                <a href="tel:847-306-9797" class="phone-link">📞 847-306-9797</a>
-            </p>
-            <p class="contact-item">
-                <a href="mailto:ADMIN@KAIRHVACCHICAGO.COM" class="email-link">✉️ ADMIN@KAIRHVACCHICAGO.COM</a>
-            </p>
+        <div class="info-box">
+            <p><strong>대표:</strong> YS KIM</p>
+            <p><strong>Email:</strong> <a href="mailto:ADMIN@KAIRHVACCHICAGO.COM">ADMIN@KAIRHVACCHICAGO.COM</a></p>
+        </div>
+    </section>
+
+    <!-- 💡 원래 원하셨던 이미지와 함께 구성된 4개의 서비스 파트 -->
+    <section class="services-section" id="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
         </div>
 
-        <!-- 4대 서비스 대항목 배치 -->
-        <div class="services-grid" id="services">
-            <div class="service-card">
-                <div class="service-icon">❄️</div>
-                <div class="service-text">냉난방 시스템</div>
+        <div class="services-container">
+            <!-- 1. Installation -->
+            <div class="service-part">
+                <div class="service-image-box">
+                    <img src="installation.jpg" alt="HVAC Installation" class="service-img">
+                </div>
+                <div class="service-content">
+                    <h3>Installation</h3>
+                    <p>고효율 냉난방 시스템 설계 및 완벽한 맞춤형 설치 서비스를 제공합니다.</p>
+                </div>
             </div>
-            <div class="service-card">
-                <div class="service-icon">🔧</div>
-                <div class="service-text">정기 점검 및 수리</div>
+
+            <!-- 2. Maintenance -->
+            <div class="service-part">
+                <div class="service-image-box">
+                    <img src="maintenance.jpg" alt="HVAC Maintenance" class="service-img">
+                </div>
+                <div class="service-content">
+                    <h3>Maintenance</h3>
+                    <p>시스템의 수명을 연장하고 에너지를 절약할 수 있는 정기 점검 및 관리 서비스입니다.</p>
+                </div>
             </div>
-            <div class="service-card">
-                <div class="service-icon">🚰</div>
-                <div class="service-text">플러밍 작업</div>
+
+            <!-- 3. Repair -->
+            <div class="service-part">
+                <div class="service-image-box">
+                    <img src="repair.jpg" alt="HVAC Repair" class="service-img">
+                </div>
+                <div class="service-content">
+                    <h3>Repair</h3>
+                    <p>갑작스러운 고장에도 신속하고 정확하게 진단하여 정상 작동하도록 수리해 드립니다.</p>
+                </div>
             </div>
-            <div class="service-card">
-                <div class="service-icon">⚡</div>
-                <div class="service-text">전기 작업</div>
+
+            <!-- 4. Coil Cleaning -->
+            <div class="service-part">
+                <div class="service-image-box">
+                    <img src="coil_cleaning.jpg" alt="Coil Cleaning" class="service-img">
+                </div>
+                <div class="service-content">
+                    <h3>Coil Cleaning</h3>
+                    <p>냉방 효율을 극대화하고 공기 질을 개선하기 위한 전문 콘덴서 및 에바포레이터 코일 세척입니다.</p>
+                </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- 푸터 -->
-    <footer class="footer-qr">
+    <!-- 하단 푸터 및 QR -->
+    <footer class="site-footer">
         <p>저희 웹사이트를 QR코드로도 방문해 보세요</p>
-        <div class="qr-code">QR CODE</div>
+        <div class="qr-code-box">QR CODE</div>
     </footer>
 
 </body>
